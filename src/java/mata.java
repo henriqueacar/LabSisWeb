@@ -33,7 +33,7 @@ public class mata extends HttpServlet {
         if(session != null){
             session.setAttribute("loggedIn", "FALSE");
         }
-        response.sendRedirect("index.html");
+        response.sendRedirect("login.jsp");
     }
     
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

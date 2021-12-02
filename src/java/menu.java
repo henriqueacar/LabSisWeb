@@ -43,7 +43,6 @@ public class menu extends HttpServlet {
             loggedIn = (String) session.getAttribute("loggedIn");
             
             if (loggedIn != null && loggedIn.equals("TRUE")){
-                //menu(response);
                 response.sendRedirect("menujsp.jsp");
             }
             else{
@@ -53,49 +52,19 @@ public class menu extends HttpServlet {
                 if(usuario_input != null){
                     if(login(usuario_input, senha_input)){
                         session.setAttribute("loggedIn", "TRUE");
-                        //menu(response);
                         response.sendRedirect("menujsp.jsp");
                     }
                     else{
                         session.setAttribute("msg", "Senha inválida.");
-                        response.sendRedirect("index.html");
+                        response.sendRedirect("login.jsp");
                     }
                 }
                 else{
                     session.setAttribute("msg", "Sessão expirada.");
-                    response.sendRedirect("index.html");
+                    response.sendRedirect("login.jsp");
                 }
             }
     }
-
-    /**
-     MENU
-     * @param response
-     * @throws java.io.IOException
-     **/
-    /*public void menu(HttpServletResponse response) throws IOException {
-        response.setContentType("text/html;charset=UTF-8");
-            try (PrintWriter out = response.getWriter()) {
-                //Iniciando o documento XHTML
-                out.println("<?xml version = \"1.0\"?>");
-                out.printf("%s%s%s", "<!DOCTYPE html PUBLIC",
-                        " \"-//W3C//DTD XHTML 1.0 Strict//EN\"",
-                        " \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">\n");
-                out.println("<html xmlns = \"http://www.w3.org/1999/xhtml\">");
-                //Sessao HEAD
-                out.println("<head>");
-                out.println("<title>Menu</title>");
-                out.println("</head>");
-                //Sessao Body
-                out.println("<body>");
-                out.println("<h1 style=\"text-align:center;\">Menu</h1>");
-                out.println("<h2 style=\"text-align:center;\"><a href=\"welcome.html\">Welcome</a></h2>");
-                out.println("<h2 style=\"text-align:center;\"><a href=\"mata\">Sair</a></h2>");
-                out.println("</body>");
-                //Fim do documento XHTML
-                out.println("</html>");
-            }
-    }*/
     
     public boolean login(String usuario_input, String senha_input) throws ServletException{
         ServletContext sc = getServletContext();
