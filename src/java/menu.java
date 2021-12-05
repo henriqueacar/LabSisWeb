@@ -71,11 +71,12 @@ public class menu extends HttpServlet {
         //USUARIO_DB E SENHA_DB PEGOS VIA PARAMETROS DE CONTEXTO
         String usuario_db = sc.getInitParameter("usuario_db");
         String senha_db = sc.getInitParameter("senha_db");
+        String usuario = usuario_input.replaceAll("\'", "");
+        String senha = senha_input.replaceAll("\'", "");
         
         boolean result = false;
         String JDBC_DRIVER = "org.apache.derby.jdbc.ClientDriver";
         String DB_URL = "jdbc:derby://localhost:1527/labsisweb";
-        String resp = "EXECUTOU";
         
         //  Database credentials
         Connection conn = null;
@@ -93,7 +94,7 @@ public class menu extends HttpServlet {
                 String sql;
 
                 sql = "SELECT USUARIO, SENHA FROM ADMINUSER.USUARIO WHERE USUARIO = '"
-                        + usuario_input + "' and SENHA='" + senha_input + "'";
+                        + usuario + "' and SENHA='" + senha + "'";
 
                 ResultSet rs = stmt.executeQuery(sql);
 
@@ -108,13 +109,11 @@ public class menu extends HttpServlet {
             } catch (SQLException e) {
                 //Handle errors for JDBC
                 //throw new ServletException(e);
-                resp = e.getMessage();
                 throw new ServletException(e);
 
             } catch (Exception e) {
                 //Handle errors for Class.forName
                 //throw new ServletException(e);
-                resp = e.getMessage();
                 throw new ServletException(e);
             } finally {
                 //finally block used to close resources
