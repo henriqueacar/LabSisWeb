@@ -6,16 +6,19 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html>
+<html style="background-color: gainsboro">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Menu</title>
     </head>
-    <body>
-        <h1 style="text-align:center;">Menu</h1>
-        <h2 style="text-align:center;"><a href="welcome.html">Welcome</a></h2>
-        <h2 style="text-align:center;"><a href="lista.jsp">Lista</a></h2>
-        <h2 style="text-align:center;"><a href="mata">Sair</a></h2>
+    <body style="text-align:center;">
+        <h1>Menu</h1>
+        <h3><a href="Controller?operacao=welcome">Welcome</a></h3>
+        <h3><a href="Controller?operacao=recursos">Recursos</a></h3>
+        <h3><a href="Controller?operacao=lista">Lista</a></h3>
+        <h3><a href="errohtml.html">Erro HTML</a></h3>
+        <h3><a href="Controller?operacao=erroJava">Erro JAVA</a></h3>
+        <h3><a href="Controller?operacao=sair">Sair</a></h3>
         
     </body>
 </html>

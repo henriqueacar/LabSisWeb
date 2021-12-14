@@ -8,6 +8,14 @@
         <param-name>senha_db</param-name>
         <param-value>admin</param-value>
     </context-param>
+    <filter>
+        <filter-name>filtro1</filter-name>
+        <filter-class>filtro1</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>filtro1</filter-name>
+        <url-pattern>/menujsp.jsp</url-pattern>
+    </filter-mapping>
     <servlet>
         <servlet-name>mata</servlet-name>
         <servlet-class>mata</servlet-class>
@@ -16,6 +24,10 @@
         <servlet-name>menu</servlet-name>
         <servlet-class>menu</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>Controller</servlet-name>
+        <servlet-class>Controller</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>mata</servlet-name>
         <url-pattern>/mata</url-pattern>
@@ -23,6 +35,10 @@
     <servlet-mapping>
         <servlet-name>menu</servlet-name>
         <url-pattern>/menu</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Controller</servlet-name>
+        <url-pattern>/Controller</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

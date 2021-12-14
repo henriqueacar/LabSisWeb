@@ -11,12 +11,13 @@
 <%@page import="java.sql.DriverManager"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html>
+<html style="background-color: gainsboro">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Lista</title>
     </head>
     <body>
+    <CENTER>
         <% 
             ServletContext sc = getServletContext();
             String usuario_db = sc.getInitParameter("usuario_db");
@@ -93,6 +94,7 @@
             } //end try
         %>
         <br>
-        <a href="menujsp.jsp">Retornar ao Menu</a>
+        <a href="Controller?operacao=menu">Retornar ao Menu</a>
+    </CENTER>
     </body>
 </html>

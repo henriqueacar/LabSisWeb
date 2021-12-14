@@ -6,7 +6,7 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html>
+<html style="background-color: gainsboro">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Erro</title>
@@ -14,6 +14,6 @@
     <body>
         <h1>Ocorreu um erro inesperado. </h1>
         <br>
-        <a href="mata">Sair</a>
+        <a href="Controller?operacao=sair">Sair</a>
     </body>
 </html>
