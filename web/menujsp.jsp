@@ -18,8 +18,7 @@
         %>
         <%if(usuario != null){%>
             <p style="color: black; font-weight: bold">Usuário: <%=usuario%></p>
-            <% session.removeAttribute("usuario"); 
-        }%>
+        <%}%>
         <h3><a href="Controller?operacao=welcome">Welcome</a></h3>
         <h3><a href="Controller?operacao=recursos">Recursos</a></h3>
         <h3><a href="Controller?operacao=lista">Lista</a></h3>
