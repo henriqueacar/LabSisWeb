@@ -32,7 +32,7 @@
                 <th style="font-size: 1.5rem">Recursos</th>
             </tr>
             <tr>
-                <td>Captura de Erros Java</td>
+                <td>Captura de Erros HTML e Java</td>
             </tr>
             <tr>
                 <td>Servlet/JSP</td>

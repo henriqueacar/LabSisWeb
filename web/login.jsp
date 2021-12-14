@@ -15,12 +15,13 @@
         <title>Login</title>
     </head>
     <body>
-        <h1 style="text-align:center;">UFJF - Depto. de Ciência da Computação</h1>
-        <h2 style="text-align:center;">Laboratório de Programação de Sistemas Web</h2>
-        <h2 style="text-align:center;">Protótipo II</h2>
-        <p style="text-align:center;">Desenvolvedor: Henrique de Almeida Cardoso</p>
+        <CENTER>
+        <h1>UFJF - Depto. de Ciência da Computação</h1>
+        <h2>Laboratório de Programação de Sistemas Web</h2>
+        <h2 style="color: crimson;">Protótipo II</h2>
+        <p style="font-weight: bold">Desenvolvedor: Henrique de Almeida Cardoso</p>
         <form action="Controller" method="POST">
-            <div style="text-align:center;">
+            <div>
                 <div style=" margin-top: 5rem;">
                     <label>Usuário:</label>
                     <input type="text" name="usuario">
@@ -38,5 +39,6 @@
                 </div>
             </div>
         </form>
+        </CENTER>
     </body>
 </html>
