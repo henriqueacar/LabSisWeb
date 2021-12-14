@@ -83,6 +83,10 @@ public class Controller extends HttpServlet {
                         rd = request.getRequestDispatcher("welcome.html");
                         rd.forward(request, response);
                         break;
+                    case "erroHTML":
+                        rd = request.getRequestDispatcher("errohtml.html");
+                        rd.forward(request, response);
+                        break;
                     default:
                         session.setAttribute("loggedIn", "FALSE");
                         rd = request.getRequestDispatcher("erro.jsp");

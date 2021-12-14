@@ -4,6 +4,8 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
 import javax.servlet.ServletException;
 
 /*
@@ -18,14 +20,14 @@ import javax.servlet.ServletException;
  */
 public class LoginDB {
     
+        private static final String usuario_db = "adminuser";
+        private static final String senha_db = "admin";
+        private static final String JDBC_DRIVER = "org.apache.derby.jdbc.ClientDriver";
+        private static final String DB_URL = "jdbc:derby://localhost:1527/labsisweb";
+    
     public static boolean login(String usuario_input, String senha_input) throws ServletException{
-        //USUARIO_DB E SENHA_DB PEGOS VIA PARAMETROS DE CONTEXTO
-        String usuario_db = "adminuser";
-        String senha_db = "admin";
         
         boolean result = false;
-        String JDBC_DRIVER = "org.apache.derby.jdbc.ClientDriver";
-        String DB_URL = "jdbc:derby://localhost:1527/labsisweb";
         
         //  Database credentials
         Connection conn = null;
@@ -84,8 +86,6 @@ public class LoginDB {
             if(result){
                 return true;
             }
-            
         return false;
     }
-    
 }

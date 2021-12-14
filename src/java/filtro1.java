@@ -43,7 +43,6 @@ public class filtro1 implements Filter {
             RequestDispatcher rd = request.getRequestDispatcher("login.jsp");
             rd.forward(request, response);
         }
-
     }
 
     /**

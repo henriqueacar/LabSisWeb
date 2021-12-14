@@ -12,8 +12,10 @@
         <title>Erro</title>
     </head>
     <body>
+    <CENTER>
         <h1>Ocorreu um erro inesperado. </h1>
         <br>
         <a href="Controller?operacao=sair">Sair</a>
+    </CENTER>
     </body>
 </html>

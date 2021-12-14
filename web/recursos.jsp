@@ -25,11 +25,11 @@
     </head>
     <body>
     <CENTER>
-        <h1>Protótipo II</h1>
-        <h2>Versão 0.1</h2>
+        <h1 style="color: crimson">Protótipo II</h1>
+        <h2 style="color: crimson">Versão 0.1</h2>
         <table>
             <tr>
-                <th style="color: crimson; font-size: 1.5rem">Recursos</th>
+                <th style="font-size: 1.5rem">Recursos</th>
             </tr>
             <tr>
                 <td>Captura de Erros Java</td>

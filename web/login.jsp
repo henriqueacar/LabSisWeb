@@ -31,11 +31,10 @@
                     <input type="password" name="senha">
                     <br>
                     <button type="submit" name ="operacao" value="login" style=" margin-top: 0.3rem;">Login</button>
-                    <%
-                        if(msg != null){%>
+                    <%if(msg != null){%>
                         <p style="color:red;"><%=msg%></p>
                         <% session.removeAttribute("msg"); 
-                        }%>
+                    }%>
                 </div>
             </div>
         </form>
