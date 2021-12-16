@@ -41,7 +41,13 @@
                 <td>Persistência de dados utilizando JDBC</td>
             </tr>
             <tr>
+                <td>Padrão DAO para acesso e controle de dados</td>
+            </tr>
+            <tr>
                 <td>Controle de Sessão</td>
+            </tr>
+            <tr>
+                <td>Eventos de Aplicação e de Sessão</td>
             </tr>
             <tr>
                 <td>Filtros</td>

@@ -15,9 +15,13 @@
         <h1 style="color: crimson">Menu</h1>
         <%
             String usuario = (String) session.getAttribute("usuario");
+            String userCount = (String) session.getServletContext().getAttribute("userCount");
         %>
         <%if(usuario != null){%>
             <p style="color: black; font-weight: bold">Usuário: <%=usuario%></p>
+        <%}%>
+        <%if(userCount != null){%>
+            <p style="color: black; font-weight: bold">Usuário: <%=userCount%></p>
         <%}%>
         <h3><a href="Controller?operacao=welcome">Welcome</a></h3>
         <h3><a href="Controller?operacao=recursos">Recursos</a></h3>

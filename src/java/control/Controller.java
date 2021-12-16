@@ -1,3 +1,5 @@
+package control;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -5,18 +7,30 @@
  */
 
 import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import model.DaoUsuario;
+import model.Usuario;
 
 /**
  *
  * @author Henrique
  */
 public class Controller extends HttpServlet {
+    private String usuario_db;
+    private String senha_db;
+    
+    @Override
+    public void init(){
+        usuario_db = getServletContext().getInitParameter("usuario_db");
+        senha_db = getServletContext().getInitParameter("senha_db");
+    }
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -26,9 +40,10 @@ public class Controller extends HttpServlet {
      * @param response servlet response
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
+     * @throws java.lang.ClassNotFoundException
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
+            throws ServletException, IOException, ClassNotFoundException {
         HttpSession session = null;
         String loggedIn = null;
         RequestDispatcher rd = null;
@@ -39,7 +54,9 @@ public class Controller extends HttpServlet {
         session = request.getSession(true);
         
         if(operacao != null && operacao.equals("login")){
-            if(LoginDB.login(usuario, senha)){
+            DaoUsuario dao = new DaoUsuario(usuario_db, senha_db);
+            Usuario temp = dao.buscar(usuario);
+            if(temp != null && senha != null && temp.getPassword().equals(senha)){
                 session.setAttribute("loggedIn", "TRUE");
                 session.setAttribute("usuario", usuario);
                 rd = request.getRequestDispatcher("menujsp.jsp");
@@ -109,7 +126,11 @@ public class Controller extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        try {
+            processRequest(request, response);
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(Controller.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
     /**
@@ -123,7 +144,11 @@ public class Controller extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        try {
+            processRequest(request, response);
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(Controller.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
     /**
