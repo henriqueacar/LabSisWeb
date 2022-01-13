@@ -14,7 +14,7 @@
 <%@page import="java.sql.DriverManager"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html style="background-color: gainsboro">
+<html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Lista</title>
@@ -47,6 +47,7 @@
         </h3>
         <br>
         <a href="Controller?operacao=menu">Retornar ao Menu</a>
+        <jsp:include page = "adrotator.jsp"  flush = "true" />
     </CENTER>
     </body>
 </html>
