@@ -7,18 +7,23 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
-    
+
     <style>
+        .table {
+            margin-top: 5rem;
+            width: 30% !important; 
+        }
         table td {
-          border: 0px solid black;
-          border-collapse: collapse;
+            border: 0px solid black;
+            border-collapse: collapse;
         }
-        th, td {
-         padding: 5px;
-         font-weight: bold;
+        table th {
+            text-align: center; 
+            font-size: 30px;
         }
+
     </style>
-    
+
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Recursos</title>
@@ -28,52 +33,81 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     </head>
     <body>
-    <CENTER>
-        <h1 style="color: crimson">Protótipo II</h1>
-        <h2 style="color: crimson">Versão 0.2</h2>
-        <table>
-            <tr>
-                <th style="font-size: 1.5rem">Recursos</th>
-            </tr>
-            <tr>
-                <td>Captura de Erros HTML e Java</td>
-            </tr>
-            <tr>
-                <td>Servlet/JSP</td>
-            </tr>
-            <tr>
-                <td>Persistência de dados utilizando JDBC</td>
-            </tr>
-            <tr>
-                <td>Padrão DAO para acesso e controle de dados</td>
-            </tr>
-            <tr>
-                <td>Controle de Sessão</td>
-            </tr>
-            <tr>
-                <td>Eventos de Aplicação e de Sessão</td>
-            </tr>
-            <tr>
-                <td>Filtros</td>
-            </tr>
-            <tr>
-                <td>MVC</td>
-            </tr>
-            <tr>
-                <td>JavaBeans</td>
-            </tr>
-        </table>
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="Controller?operacao=menu">LabSisWeb</a>
+                </div>
+                <ul class="nav navbar-nav">
+                    <li><a href="Controller?operacao=welcome">Welcome</a></li>
+                    <li><a href="Controller?operacao=recursos">Recursos</a></li>
+                    <li><a href="Controller?operacao=lista">Lista</a></li>
+                    <li><a href="Controller?operacao=erroHTML">Erro HTML</a></li>
+                    <li><a href="Controller?operacao=erroJava">Erro JAVA</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="Controller?operacao=sair"><span class="glyphicon glyphicon-log-out"></span> Sair</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="container" style="margin-top:50px">
+            <CENTER>
+                <h1 style="color: crimson">Protótipo II</h1>
+                <h2 style="color: crimson">Versão 0.4</h2>
 
-        <br>
-        <a href="Controller?operacao=menu">Retornar ao menu</a>
-    </CENTER>       
-</body>
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>Recursos</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Captura de Erros HTML e Java</td>
+                        </tr>
+                        <tr>
+                            <td>Servlet/JSP</td>
+                        </tr>
+                        <tr>
+                            <td>Persistência de dados utilizando JDBC</td>
+                        </tr>
+                        <tr>
+                            <td>Padrão DAO para acesso e controle de dados</td>
+                        </tr>
+                        <tr>
+                            <td>Controle de Sessão</td>
+                        </tr>
+                        <tr>
+                            <td>Eventos de Aplicação e de Sessão</td>
+                        </tr>
+                        <tr>
+                            <td>Filtros</td>
+                        </tr>
+                        <tr>
+                            <td>MVC</td>
+                        </tr>
+                        <tr>
+                            <td>JavaBeans</td>
+                        </tr>
+                        <tr>
+                            <td>Bootstrap</td>
+                        </tr>
+                        <tr>
+                            <td>AdRotator</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <br>
+                <%--<a href="Controller?operacao=menu">Retornar ao menu</a>--%>
+            </CENTER>
+        </div>       
+    </body>
 </html>
 
-                    
-                    
-                    
-                    
-                    
-                    
-                    
+
+
+
+
+
+

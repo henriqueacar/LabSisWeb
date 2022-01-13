@@ -19,7 +19,7 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     </head>
     <body>
-        <div class=".container" style="text-align:center;">
+        <div class="container text-center">
             <h1>UFJF - Depto. de Ciência da Computação</h1>
             <h2>Laboratório de Programação de Sistemas Web</h2>
             <h2 style="color: crimson;">Protótipo II</h2>
@@ -32,7 +32,7 @@
                         <br>
                     </div>
                     <div style=" margin-top: 0.3rem;">
-                        <label style=" margin-right: 0.9rem;" >Senha:</label>
+                        <label style=" margin-right: 0.95rem;" >Senha:</label>
                         <input type="password" name="senha">
                         <br>
                         <button type="submit" name ="operacao" value="login" style=" margin-top: 0.3rem;">Login</button>
