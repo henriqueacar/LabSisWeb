@@ -7,9 +7,9 @@
 
 <jsp:useBean id = "rotator" scope = "session" class = "control.Rotator" />
 
-      <% rotator.nextAd(); %>
-  
-      <p class = "big"><br></p>
+    <% rotator.nextAd(); %>
+    
+    <p class = "big"><br></p>
       <p> 
          <a href = "<jsp:getProperty name = "rotator" 
             property = "link" />" target="_blank">
